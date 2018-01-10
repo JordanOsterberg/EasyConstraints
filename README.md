@@ -11,7 +11,7 @@ If you want an overview of what EasyConstraints does, download the entire projec
 
 You will be greeted with a ViewController populated with a UIImage surrounded by some UIViews. Go ahead and drag the slider to change the distance between the objects! You can press the "Enable automatic" button to have the slider and the views do this for you.
 
-![Example One](https://raw.githubusercontent.com/JordanOsterberg/EasyConstraints/ExampleOne.png)
+![Example One](https://raw.githubusercontent.com/JordanOsterberg/EasyConstraints/master/ExampleOne.png)
 
 Open ```ExampleViewController.swift``` to view the code powering this example.
 
