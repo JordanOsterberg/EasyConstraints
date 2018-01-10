@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		B07AD97F20068C2A003B2202 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AD97E20068C2A003B2202 /* AppDelegate.swift */; };
-		B07AD98120068C2A003B2202 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AD98020068C2A003B2202 /* ViewController.swift */; };
-		B07AD98420068C2A003B2202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B07AD98220068C2A003B2202 /* Main.storyboard */; };
+		B07AD98120068C2A003B2202 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AD98020068C2A003B2202 /* ExampleViewController.swift */; };
 		B07AD98620068C2A003B2202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B07AD98520068C2A003B2202 /* Assets.xcassets */; };
 		B07AD98920068C2A003B2202 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B07AD98720068C2A003B2202 /* LaunchScreen.storyboard */; };
+		B07AD99120068CDE003B2202 /* UIView+EasyConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AD99020068CDE003B2202 /* UIView+EasyConstraints.swift */; };
+		B07AD99320069875003B2202 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = B07AD99220069875003B2202 /* LICENSE.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B07AD97B20068C2A003B2202 /* Stories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stories.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B07AD97B20068C2A003B2202 /* EasyConstraints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyConstraints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07AD97E20068C2A003B2202 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B07AD98020068C2A003B2202 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B07AD98320068C2A003B2202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B07AD98020068C2A003B2202 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		B07AD98520068C2A003B2202 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B07AD98820068C2A003B2202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B07AD98A20068C2B003B2202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B07AD99020068CDE003B2202 /* UIView+EasyConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+EasyConstraints.swift"; sourceTree = "<group>"; };
+		B07AD99220069875003B2202 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +40,7 @@
 		B07AD97220068C2A003B2202 = {
 			isa = PBXGroup;
 			children = (
-				B07AD97D20068C2A003B2202 /* Stories */,
+				B07AD97D20068C2A003B2202 /* EasyConstraints */,
 				B07AD97C20068C2A003B2202 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,30 +48,31 @@
 		B07AD97C20068C2A003B2202 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B07AD97B20068C2A003B2202 /* Stories.app */,
+				B07AD97B20068C2A003B2202 /* EasyConstraints.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B07AD97D20068C2A003B2202 /* Stories */ = {
+		B07AD97D20068C2A003B2202 /* EasyConstraints */ = {
 			isa = PBXGroup;
 			children = (
 				B07AD97E20068C2A003B2202 /* AppDelegate.swift */,
-				B07AD98020068C2A003B2202 /* ViewController.swift */,
-				B07AD98220068C2A003B2202 /* Main.storyboard */,
+				B07AD98020068C2A003B2202 /* ExampleViewController.swift */,
 				B07AD98520068C2A003B2202 /* Assets.xcassets */,
 				B07AD98720068C2A003B2202 /* LaunchScreen.storyboard */,
 				B07AD98A20068C2B003B2202 /* Info.plist */,
+				B07AD99020068CDE003B2202 /* UIView+EasyConstraints.swift */,
+				B07AD99220069875003B2202 /* LICENSE.md */,
 			);
-			path = Stories;
+			path = EasyConstraints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B07AD97A20068C2A003B2202 /* Stories */ = {
+		B07AD97A20068C2A003B2202 /* EasyConstraints */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B07AD98D20068C2B003B2202 /* Build configuration list for PBXNativeTarget "Stories" */;
+			buildConfigurationList = B07AD98D20068C2B003B2202 /* Build configuration list for PBXNativeTarget "EasyConstraints" */;
 			buildPhases = (
 				B07AD97720068C2A003B2202 /* Sources */,
 				B07AD97820068C2A003B2202 /* Frameworks */,
@@ -79,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = Stories;
+			name = EasyConstraints;
 			productName = Stories;
-			productReference = B07AD97B20068C2A003B2202 /* Stories.app */;
+			productReference = B07AD97B20068C2A003B2202 /* EasyConstraints.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -100,7 +103,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B07AD97620068C2A003B2202 /* Build configuration list for PBXProject "Stories" */;
+			buildConfigurationList = B07AD97620068C2A003B2202 /* Build configuration list for PBXProject "EasyConstraints" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,7 +116,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B07AD97A20068C2A003B2202 /* Stories */,
+				B07AD97A20068C2A003B2202 /* EasyConstraints */,
 			);
 		};
 /* End PBXProject section */
@@ -124,8 +127,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B07AD98920068C2A003B2202 /* LaunchScreen.storyboard in Resources */,
+				B07AD99320069875003B2202 /* LICENSE.md in Resources */,
 				B07AD98620068C2A003B2202 /* Assets.xcassets in Resources */,
-				B07AD98420068C2A003B2202 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B07AD98120068C2A003B2202 /* ViewController.swift in Sources */,
+				B07AD99120068CDE003B2202 /* UIView+EasyConstraints.swift in Sources */,
+				B07AD98120068C2A003B2202 /* ExampleViewController.swift in Sources */,
 				B07AD97F20068C2A003B2202 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,14 +148,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B07AD98220068C2A003B2202 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B07AD98320068C2A003B2202 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B07AD98720068C2A003B2202 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -276,9 +272,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RZK4BBVLPU;
-				INFOPLIST_FILE = Stories/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/EasyConstraints/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tech.shadowsystems.Stories;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.shadowsystems.EasyConstraints;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -291,9 +288,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RZK4BBVLPU;
-				INFOPLIST_FILE = Stories/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/EasyConstraints/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tech.shadowsystems.Stories;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.shadowsystems.EasyConstraints;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -303,7 +301,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B07AD97620068C2A003B2202 /* Build configuration list for PBXProject "Stories" */ = {
+		B07AD97620068C2A003B2202 /* Build configuration list for PBXProject "EasyConstraints" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B07AD98B20068C2B003B2202 /* Debug */,
@@ -312,7 +310,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B07AD98D20068C2B003B2202 /* Build configuration list for PBXNativeTarget "Stories" */ = {
+		B07AD98D20068C2B003B2202 /* Build configuration list for PBXNativeTarget "EasyConstraints" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B07AD98E20068C2B003B2202 /* Debug */,
