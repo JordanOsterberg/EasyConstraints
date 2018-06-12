@@ -6,10 +6,19 @@
 //  Copyright © 2018 Jordan Osterberg. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
-extension UIView {
-    
+typealias View = UIView
+#endif
+
+#if os(macOS)
+import AppKit
+
+typealias View = NSView
+#endif
+
+extension View {
     
     /// Center the view horizontally in another view
     ///
@@ -18,7 +27,7 @@ extension UIView {
     ///   - active: If you want to activate this constraint
     /// - Returns: The created constraint
     @discardableResult
-    func centerHorizontally(in view: UIView, active: Bool = true) -> NSLayoutConstraint? {
+    func centerHorizontally(in view: View, active: Bool = true) -> NSLayoutConstraint? {
         self.translatesAutoresizingMaskIntoConstraints = false
         
         let constraint = self.centerXAnchor.constraint(equalTo: view.centerXAnchor)
@@ -26,7 +35,7 @@ extension UIView {
     }
     
     @discardableResult
-    func centerVertically(in view: UIView, active: Bool = true) -> NSLayoutConstraint? {
+    func centerVertically(in view: View, active: Bool = true) -> NSLayoutConstraint? {
         self.translatesAutoresizingMaskIntoConstraints = false
         
         let constraint = self.centerYAnchor.constraint(equalTo: view.centerYAnchor)
@@ -34,7 +43,7 @@ extension UIView {
     }
     
     @discardableResult
-    func equalWidth(to view: UIView, active: Bool = true) -> NSLayoutConstraint? {
+    func equalWidth(to view: View, active: Bool = true) -> NSLayoutConstraint? {
         self.translatesAutoresizingMaskIntoConstraints = false
         
         let constraint = self.widthAnchor.constraint(equalTo: view.widthAnchor)
@@ -42,7 +51,7 @@ extension UIView {
     }
     
     @discardableResult
-    func equalHeight(to view: UIView, active: Bool = true) -> NSLayoutConstraint? {
+    func equalHeight(to view: View, active: Bool = true) -> NSLayoutConstraint? {
         self.translatesAutoresizingMaskIntoConstraints = false
         
         let constraint = self.heightAnchor.constraint(equalTo: view.heightAnchor)
@@ -66,7 +75,7 @@ extension UIView {
     }
     
     @discardableResult
-    func placeBelow(view: UIView, distance: CGFloat = 0, active: Bool = true) -> NSLayoutConstraint? {
+    func placeBelow(view: View, distance: CGFloat = 0, active: Bool = true) -> NSLayoutConstraint? {
         self.translatesAutoresizingMaskIntoConstraints = false
         
         let constraint = self.topAnchor.constraint(equalTo: view.bottomAnchor, constant: distance)
@@ -74,7 +83,7 @@ extension UIView {
     }
     
     @discardableResult
-    func placeAbove(view: UIView, distance: CGFloat = 0, active: Bool = true) -> NSLayoutConstraint? {
+    func placeAbove(view: View, distance: CGFloat = 0, active: Bool = true) -> NSLayoutConstraint? {
         self.translatesAutoresizingMaskIntoConstraints = false
         
         let constraint = self.bottomAnchor.constraint(equalTo: view.topAnchor, constant: distance)
@@ -82,7 +91,7 @@ extension UIView {
     }
     
     @discardableResult
-    func placeRightOf(view: UIView, distance: CGFloat = 0, active: Bool = true) -> NSLayoutConstraint? {
+    func placeRightOf(view: View, distance: CGFloat = 0, active: Bool = true) -> NSLayoutConstraint? {
         self.translatesAutoresizingMaskIntoConstraints = false
         
         let constraint = self.leftAnchor.constraint(equalTo: view.rightAnchor, constant: distance)
@@ -90,11 +99,18 @@ extension UIView {
     }
     
     @discardableResult
-    func placeLeftOf(view: UIView, distance: CGFloat = 0, active: Bool = true) -> NSLayoutConstraint? {
+    func placeLeftOf(view: View, distance: CGFloat = 0, active: Bool = true) -> NSLayoutConstraint? {
         self.translatesAutoresizingMaskIntoConstraints = false
         
         let constraint = self.rightAnchor.constraint(equalTo: view.leftAnchor, constant: distance)
         return handle(constraint: constraint, active: active)
+    }
+    
+    func sameSizeAs(view: View) {
+        self.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        self.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        self.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        self.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
     }
     
     private func handle(constraint: NSLayoutConstraint, active: Bool) -> NSLayoutConstraint? {
